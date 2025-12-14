@@ -1,0 +1,9 @@
+{
+  "name": "colorwork-sweater-designer",
+  "version": "1.0.0",
+  "description": "Single-page TypeScript app with Bootstrap dark mode",
+  "scripts": {
+    "build": "esbuild src/app.ts --bundle --outfile=html/app.js",
+    "dev": "esbuild src/app.ts --bundle --outfile=html/app.js --watch"
+  }
+}
