@@ -76,8 +76,8 @@ export class OPFSStorage {
     }
     
     const files: string[] = [];
-    // @ts-ignore - async iterator
-    for await (const entry of this.root!.values()) {
+    // Using async iterator for FileSystemDirectoryHandle
+    for await (const entry of (this.root as any).values()) {
       if (entry.kind === 'file') {
         files.push(entry.name);
       }
