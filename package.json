@@ -1,0 +1,25 @@
+{
+  "name": "colorworksweaterdesigner",
+  "version": "1.0.0",
+  "description": "A single-page TypeScript application for designing colorwork sweaters",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run typecheck && npm run bundle",
+    "typecheck": "tsc --noEmit",
+    "bundle": "esbuild src/app.ts --bundle --outfile=dist/app.js --format=esm",
+    "watch": "npm run typecheck && npm run watch:bundle",
+    "watch:bundle": "esbuild src/app.ts --bundle --outfile=dist/app.js --format=esm --watch",
+    "dev": "npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.27.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
