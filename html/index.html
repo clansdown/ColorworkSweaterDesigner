@@ -7,10 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body onload="main()">
-    <div class="container mt-5">
+    <div class="d-flex justify-content-end p-2">
+        <div class="form-check form-switch d-flex align-items-center">
+            <span>☀️</span>
+            <input class="form-check-input mx-2" type="checkbox" id="theme-toggle">
+            <span>🌙</span>
+        </div>
+    </div>
+    <div class="container">
         <h1 class="mb-4">Colorwork Sweater Designer</h1>
-        <p>Welcome to the app! Use the button below to toggle between light and dark modes.</p>
-        <button id="theme-toggle" class="btn btn-secondary">Toggle Dark Mode</button>
+        <p>Welcome to the app! Use the toggle above to switch between light and dark modes.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="app.js"></script>

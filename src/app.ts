@@ -1,22 +1,21 @@
 function main() {
-    const toggleButton = document.getElementById('theme-toggle') as HTMLButtonElement;
+    const toggle = document.getElementById('theme-toggle') as HTMLInputElement;
     const html = document.documentElement;
 
     // Function to set theme
     const setTheme = (theme: string) => {
         html.setAttribute('data-bs-theme', theme);
         localStorage.setItem('theme', theme);
-        toggleButton.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        toggle.checked = theme === 'dark';
     };
 
     // Load saved theme or default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
 
-    // Toggle on click
-    toggleButton.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-bs-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    // Toggle on change
+    toggle.addEventListener('change', () => {
+        const newTheme = toggle.checked ? 'dark' : 'light';
         setTheme(newTheme);
     });
 }
