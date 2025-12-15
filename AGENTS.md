@@ -5,7 +5,8 @@
 - `npm run dev` - Build with watch mode for development
 
 ## Test Commands
-No test framework configured. Consider adding Jest or similar.
+- `npm run check` - Check for TypeScript errors using tsc
+- No test framework configured. Consider adding Jest or similar.
 
 ## Lint Commands
 No linter configured. Consider adding ESLint with TypeScript support.

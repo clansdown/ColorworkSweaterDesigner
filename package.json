@@ -4,6 +4,7 @@
   "description": "Single-page TypeScript app with Bootstrap dark mode",
   "scripts": {
     "build": "esbuild src/app.ts --bundle --outfile=html/app.js",
-    "dev": "esbuild src/app.ts --bundle --outfile=html/app.js --watch"
+    "dev": "esbuild src/app.ts --bundle --outfile=html/app.js --watch",
+    "check": "tsc --noEmit"
   }
 }
